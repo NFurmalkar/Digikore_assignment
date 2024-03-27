@@ -1,0 +1,13 @@
+{
+  "builds": [{
+    "src": "Digikore_assignment/wsgi.py",
+    "use": "@vercel/python",
+    "config": { "maxLambdaSize": "200mb", "runtime": "python3.9" }
+  }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Digikore_assignment/wsgi.py"
+    }
+  ]
+}
